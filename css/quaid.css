@@ -4968,8 +4968,8 @@ figcaption {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(80%, rgba(0, 0, 0, 0.3)));
-  background-image: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.3) 80%);
+  /* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(80%, rgba(0, 0, 0, 0.3))); */
+  /* background-image: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.3) 80%); */
   box-shadow: inset 0 0 0 0 #fff;
   -webkit-transition: box-shadow 1000ms cubic-bezier(.215, .61, .355, 1);
   transition: box-shadow 1000ms cubic-bezier(.215, .61, .355, 1);
@@ -4987,29 +4987,35 @@ figcaption {
   right: 0%;
   bottom: 0%;
   background-image: url('https://via.placeholder.com/1000x600.png?text=IMAGE');
-  background-position: 50% 100%;
+  background-position: 50% 90%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .c-gridgallery1__image-2.img4 {
-  background-image: url('https://via.placeholder.com/1000x600.png?text=IMAGE');
-  background-position: 50% 50%;
+  background-image: linear-gradient(rgba(29, 38, 113, 0.5), rgba(195, 55, 100, 0.5)), url('/images/house.jpg');
+  background-position: 70% 100%;
 }
 
 .c-gridgallery1__image-2.img3 {
-  background-image: url('https://via.placeholder.com/1000x600.png?text=IMAGE');
-  background-position: 50% 100%;
+  background: linear-gradient(rgba(29, 38, 113, 0.5), rgba(195, 55, 100, 0.5)), url("/images/dollar.jpg"); /* The least supported option. */
+  /* background-image: url('/images/kids.jpg'); */
+  background-position: 30% 100%;
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
+  /* height: 600px; */
 }
 
 .c-gridgallery1__image-2.img5 {
-  background-image: url('https://via.placeholder.com/1000x600.png?text=IMAGE');
+  /* background: linear-gradient(rgba(29, 38, 113, 0.5), rgba(195, 55, 100, 0.5)), url("/images/land.jpg"); The least supported option. */
+  background-image: linear-gradient( rgba(195, 55, 100, 0.5), rgba(29, 38, 113, 0.5)), url('/images/land.jpg');
   background-position: 50% 100%;
 }
 
 .c-gridgallery1__image-2.img6 {
-  background-image: url('https://via.placeholder.com/1000x600.png?text=IMAGE');
-  background-position: 50% 100%;
+  background: linear-gradient(rgba(195, 55, 100, 0.5),rgba(29, 38, 113, 0.5)), url("/images/kids.jpg"); /* The least supported option. */
+  /* background-image: url('/images/kids.jpg'); */
+  background-position: 50% 30%;
 }
 
 .link-block-2 {
@@ -6201,9 +6207,9 @@ figcaption {
     -ms-grid-rows: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
     grid-template-rows: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
   }
-  .c-slider {
+  /* .c-slider {
     max-width: 100vw;
-  }
+  } */
 }
 
 @media (max-width: 479px) {
