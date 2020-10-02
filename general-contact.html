@@ -77,7 +77,7 @@
                         <div>
                             <h3 class="margin-bottom-double">Address</h3>
                             <address>
-                                <p><i class="fas fa-map-marker-alt"></i> 27, Rajioba Street, <br>By Engraved Events, <br>Beside Winners Church, <br>Egbeda, Alimosho, Lagos State.</p>
+                                <p><i class="fas fa-map-marker-alt"></i> 27, Rajioba Street, <br>By Engraced Events, <br>Beside Winners Church, <br>Egbeda, Alimosho, Lagos State.</p>
                             </address>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
         <div class="container text-align-center padding-double map-section">
             <h3 class="map-section-head">Need direction to our office?</h3>
             <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15853.298338167073!2d3.293573171411124!3d6.606528085996901!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf6e9b2619847641!2soxford%20pace!5e0!3m2!1sen!2sng!4v1601377099916!5m2!1sen!2sng" width="100%" height="450px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15853.298338167073!2d3.293573171411124!3d6.606528085996901!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf6e9b2619847641!2soxford%20pace!5e0!3m2!1sen!2sng!4v1601377099916!5m2!1sen!2sng" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
     </div>
@@ -147,12 +147,15 @@
                                     </div>
                                     <div class="col lg-1"></div>
                                     <div class="col no-margin-bottom lg-5 sm-12">
-                                        <div class="margin-bottom">I want to talk to your experts in:</div><select id="field-2" name="field-2" class="form-select w-select">
+                                        <div class="margin-bottom">I want to talk to your experts in:</div>
+                                        <select id="field-2" name="field-2" class="form-select w-select">
                                             <option value="Consumer markets">Consumer markets</option>
-                                            <option value="Agribisnis">Agribisnis</option>
+                                            <option value="Agribisnis">Agribusiness</option>
                                             <option value="Automotive">Automotive</option>
                                             <option value="Third Choice">Third Choice</option>
-                                        </select><input type="email" class="form-input-text w-input" maxlength="256" name="Email" data-name="Email" placeholder="Your email" id="Email-4" required=""><input type="submit" value="Contact us" data-wait="Please wait..." class="button-primary w-button">
+                                        </select>
+                                        <input type="email" class="form-input-text w-input" maxlength="256" name="Email" data-name="Email" placeholder="Your email" id="Email-4" required="">
+                                        <input type="submit" value="Contact us" data-wait="Please wait..." class="button-primary w-button blue-contact-page-btn">
                                     </div>
                                 </div>
                             </form>
@@ -186,7 +189,10 @@
             </div>
             <div class="col lg-4 md-12 no-margin-bottom">
                 <div class="w-form">
-                    <form id="email-form" name="email-form" data-name="Email Form" class="flexh-align-center xs-is-wrapping"><input type="email" class="form-input-text is-grey margin-right-small lg-md-sm-no-margin-bottom w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email address" id="email-2" required=""><input type="submit" value="Subscribe" data-wait="Please wait..." class="button-primary is-small w-button"></form>
+                    <form id="email-form" name="email-form" data-name="Email Form" class="flexh-align-center xs-is-wrapping">
+                        <input type="email" class="form-input-text is-grey margin-right-small lg-md-sm-no-margin-bottom w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email address" id="email-2" required="">
+                        <input type="submit" value="Subscribe" data-wait="Please wait..." class="button-primary is-small w-button blue-contact-page-btn">
+                    </form>
                     <div class="w-form-done">
                         <div>Thank you! Your submission has been received!</div>
                     </div>
@@ -195,7 +201,7 @@
                     </div>
                 </div>
                 <div class="low-text-contrast text-xsmall margin-bottom-double">Join our newsletter to stay up to date on features and releases</div>
-                <div class="flexh-space-between">
+                <div class="footer-social flexh-space-between">
                     <a href="#" class="c-social on-dark w-inline-block">
                         <div class="fa-brand"></div>
                     </a>
@@ -231,6 +237,20 @@
         </div>
     </footer>
     <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+    <!-- schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Real Estate Organization",
+            "name": "Oxford Pace Intl ltd",
+            "hasMap": {
+            "@type": "Map",
+              "mapType": { "@id": "https://schema.org/VenueMap" },
+              "url":  "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15853.298338167073!2d3.293573171411124!3d6.606528085996901!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf6e9b2619847641!2soxford%20pace!5e0!3m2!1sen!2sng!4v1601377099916!5m2!1sen!2sng"
+              }
+        }
+    </script>
     <script src="js/quaid.js" type="text/javascript"></script>
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
