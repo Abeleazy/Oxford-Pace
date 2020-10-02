@@ -14,15 +14,26 @@
 */
 
 
+/* .fixed-bg {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/images/filtergrade-4T4AcGJvARQ-unsplash.jpg) no-repeat cover;
+  background-attachment: fixed;
+  background-position: center;
+} */
+
 /* ABOUT */
 .about-us {
-  margin: auto;
+  /* margin: auto; */
 }
 
 .about-us-header {
+  text-transform: uppercase;
   border-bottom: 1px solid rgb(165,209,216);
   background: rgb(253, 253, 253);
-  padding: 5px 2px;
+  padding: 5px 20px;
   text-align: center;
 }
 
@@ -38,17 +49,29 @@
 
 .vision-mission-section {
   box-shadow: 0px 0px 25px rgb(159, 159, 159);
-  background: url(/images/Conference-room.png) no-repeat;
+  background: url(/images/Conference-room-dkd.PNG) no-repeat;
   background-size: cover;
   background-position: center top;
   object-fit: cover;
+  position: relative;
+}
+
+.vision-mission-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right,#022c45,#52271f);
+  opacity: 0.5;
 }
 
 .box {
   border-radius: 10px;
   box-shadow: 0px 0px 1px rgb(159, 159, 159);
   background: white;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .mission-box {
@@ -68,7 +91,7 @@
 }
 
 .core-values {
-  background: linear-gradient(to top, rgb(235, 235, 235), rgb(233, 233, 233));
+  background: radial-gradient(rgb(235, 235, 235), rgb(233, 233, 233));
   padding-top: 50px;
   border-radius: 5px;
   margin: -32px auto -10px;
@@ -87,7 +110,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 60px auto;
+  margin: 60px auto 80px;
 }
 
 .what-wd-header {
@@ -105,11 +128,12 @@
 .investment {
   margin: 15px 12px;
   border: 1px solid rgb(235, 235, 235);
-  padding: 15px 5px 0px;
+  padding: 20px 5px 0px;
   border-radius: 10px;
-  box-shadow: black 0px 0px 10px 0px;
+  box-shadow: 0px 0px 10px 0px black;
   width: 100%;
   max-width: 320px;
+  border-bottom: 4px solid rgb(200, 200, 200);
 }
 
 .icon-bg {
@@ -132,7 +156,7 @@
 }
 
 .investment:hover {
-  transform: scale(0.9);
+  transform: scale(0.93);
 }
 .investment:hover > .icon-bg {
   background-color: black;
@@ -142,29 +166,49 @@
 }
 
 .executive-section {
-  background: linear-gradient(to top, white, rgb(235, 235, 235));
+  background: rgb(230, 230, 230);
   margin: auto;
-  padding-top: 70px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 4px solid goldenrod;
 }
 
 .executive-header {
   border-radius: 10px;
   display: inline-block;
   padding: 5px 35px;
-  background: black;
-  opacity: 0.6;
+  background: #222;
   color: white;
 }
 
 hr {
   height: 1px;
-  background-color: rgba(51, 51, 51, 0.2);
+  background-color: goldenrod;
+  margin: 20px auto 10px;
 }
+/* .container.flex-horizontal.flexh-justify-center {} */
 
 .executive {
-  margin: 10px 20px;
-  padding: 10px;
+  margin: 15px 30px 10px;
+  padding: 10px 12px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.executive-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  border: 1px solid darkgoldenrod;
+  background: rgba(86,79,232, 0.2);
+  margin: 10px auto 20px;
+}
+
+.executive-img > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  object-fit: cover;
 }
 
 .executive:after {
@@ -183,7 +227,13 @@ hr {
 
 .contact-box {
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px black;
+  box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+  transition: all 0.5s ease;
+}
+
+.contact-box:hover {
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 0px rgb(36, 35, 35);
 }
 
 .contact-box i {
@@ -201,15 +251,21 @@ hr {
 .contact-box .phone-number, .contact-box .email-address {
   color: #556575;
   font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.contact-box .phone-number:hover, .contact-box .email-address:hover {
+  color: rgb(14, 109, 172);
 }
 
 .contact-box .flexh-space-between a {
   margin: auto 2px;
+  transition: all 0.5s ease;
 }
 
 .contact-box .flexh-space-between a:hover {
   color: rgb(187, 217, 235);
-  background-color: #323a43;
+  background-color: rgb(50, 58, 69);
 }
 
 .map-section {
@@ -229,6 +285,19 @@ hr {
   margin: auto;
   width: 100%;
   height: 100%;
+}
+
+.footer-social a, input.blue-contact-page-btn {
+  transition: all 0.6s ease;
+}
+
+.footer-social a:hover {
+  color: rgb(187, 217, 235);
+  background-color: #323a43;
+}
+
+input.blue-contact-page-btn:hover {
+  background-color: rgb(60, 52, 214);
 }
 
 
