@@ -24,13 +24,84 @@
   background-position: center;
 } */
 
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  transition: all 0.5s ease-in;
+}
+
+  .newHeaderBg {
+    background: rgba(130, 130, 130, 0.6);
+    position: fixed;
+    width: 100%;
+    border-bottom: 2px solid white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 999;
+  }
+
+#hero-bg {
+  background: url(/images/francesca-tosolini-tHkJAMcO3QE-unsplash.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+#hero-bg:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right,#30739a,#613831);
+  opacity: 0.25;
+}
+
+.welcome-text {
+  color: white;
+  text-shadow: 0px 0px 1px black;
+}
+#welcome-text {
+  color: rgb(255, 255, 255);
+}
+
+#hero-btn {
+  margin: 30px auto 0;
+  max-width: 180px;
+  padding: 12px 30px;
+}
+#hero-btn i {
+  color: white;
+  transform: rotate(90deg);
+  display: inline;
+  font-size: 13px;
+}
+
+#about-hero-btn {
+  color: white;
+  border-radius: 40px;
+  background-color: #564fe8;
+  font-family: Metropolis, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  display: inline-block;
+  transition: all 0.3s ease-in;
+}
+
+
 /* ABOUT */
 .about-us {
   /* margin: auto; */
 }
 
 .about-us-header {
-  text-transform: uppercase;
   border-bottom: 1px solid rgb(165,209,216);
   background: rgb(253, 253, 253);
   padding: 5px 20px;
@@ -40,19 +111,19 @@
 .section .vision-mission-header {
   margin-top: 10px;
   margin-bottom: 50px;
+  color: black;
 }
 
 .section h2 span {
-  color: rgb(169, 37, 37);
-  background-color: #fcfcfc;
+  color: red;
+  background-color: white;
 }
 
 .vision-mission-section {
-  box-shadow: 0px 0px 25px rgb(159, 159, 159);
-  background: url(/images/Conference-room-dkd.PNG) no-repeat;
+  box-shadow: 0px 0px 80px rgb(159, 159, 159);
+  background: url(/images/filtergrade-4T4AcGJvARQ-unsplash.jpg) no-repeat;
   background-size: cover;
-  background-position: center top;
-  object-fit: cover;
+  background-position: center;
   position: relative;
 }
 
@@ -63,8 +134,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom right,#022c45,#52271f);
-  opacity: 0.5;
+  background-image: linear-gradient(to bottom right,#4184aa,#673d36);
+  opacity: 0.3;
 }
 
 .box {
@@ -86,23 +157,34 @@
 .core-value-header {
   border-bottom: 1px solid rgb(165,209,216);
   background: rgb(253, 253, 253);
-  padding: 5px 2px;
+  padding: 5px 60px;
   margin-bottom: 40px;
+  color: red;
+  display: inline-block;
 }
 
 .core-values {
-  background: radial-gradient(rgb(235, 235, 235), rgb(233, 233, 233));
+  background: radial-gradient(rgb(245, 245, 245), rgb(235, 235, 235));
+  box-shadow: 0px 0px 50px rgb(159, 159, 159);
+  border: 1px solid white;
   padding-top: 50px;
-  border-radius: 5px;
-  margin: -32px auto -10px;
+  border-radius: 50px;
+  margin: 0 auto;
 }
 
 .core-values h2 {
-  color: black;
+  border-bottom: 1px solid #556575;
 }
 
-.core-values .flex-horizontal {
-  border-left: 4px solid rgb(202, 25, 25);
+.core-values .flex-horizontal i {
+  color: rgb(14, 109, 172);
+  background-color: white;
+  border: 1px solid #556575;
+  border-top: 2px solid rgb(202, 25, 25);
+  height: 100%;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 5px;
 }
 
 .what-wd-container {
@@ -117,7 +199,7 @@
   border-bottom: 1px solid rgb(165,209,216);
   background: rgb(253, 253, 253);
   display: inline-block;
-  padding: 5px 50px;
+  padding: 5px 60px;
   margin-bottom: 35px;
 }
 
@@ -128,12 +210,13 @@
 .investment {
   margin: 15px 12px;
   border: 1px solid rgb(235, 235, 235);
-  padding: 20px 5px 0px;
+  padding: 20px 5px 50px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px black;
   width: 100%;
   max-width: 320px;
   border-bottom: 4px solid rgb(200, 200, 200);
+  position: relative;
 }
 
 .icon-bg {
@@ -144,6 +227,7 @@
   border-radius: 65%;
   display: inline-block;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
 .icon-bg i {
@@ -151,48 +235,71 @@
   line-height: 65px;
 }
 
-.investment, .icon-bg, .icon-bg i {
-  transition: all 0.6s ease;
+.investment, .icon-bg i {
+  transition: all 0.5s ease;
 }
-
 .investment:hover {
   transform: scale(0.93);
 }
 .investment:hover > .icon-bg {
-  background-color: black;
+  background-color: white;
+  border: 1px solid red;
 }
 .investment:hover > .icon-bg i {
   color: red;
 }
 
+.investment-learn-more-btn {
+  width: fit-content;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.investment-learn-more-btn a {
+  margin: 10px auto 20px;
+  min-width: 140px;
+  padding: 12px 30px;
+  background-color: #444;
+  font-size: 11px;
+  transition: all 0.3s ease-in;
+}
+.investment-learn-more-btn a:hover {
+  background-color: rgb(255, 48, 48);
+}
+
 .executive-section {
-  background: rgb(230, 230, 230);
+  background: linear-gradient(to bottom, rgb(250, 250, 250), white);
+  box-shadow: 0px 0px 80px rgb(159, 159, 159);
   margin: auto;
   padding-top: 80px;
   padding-bottom: 80px;
   border-bottom: 4px solid goldenrod;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
 }
 
 .executive-header {
   border-radius: 10px;
   display: inline-block;
   padding: 5px 35px;
-  background: #222;
+  background: rgb(80, 80, 80);
   color: white;
 }
 
 hr {
   height: 1px;
   background-color: goldenrod;
-  margin: 20px auto 10px;
+  margin: 25px auto 15px;
 }
-/* .container.flex-horizontal.flexh-justify-center {} */
 
 .executive {
-  margin: 15px 30px 10px;
-  padding: 10px 12px;
-  background-color: white;
+  margin: 15px 20px 10px;
+  padding: 10px 15px;
   border-radius: 10px;
+  box-shadow: 0px 0px 15px;
+  transition: 0.2s ease-in;
 }
 
 .executive-img {
@@ -200,15 +307,18 @@ hr {
   width: 150px;
   border-radius: 150px;
   border: 1px solid darkgoldenrod;
-  background: rgba(86,79,232, 0.2);
+  box-shadow: 0px 0px 20px rgb(233, 233, 233);
   margin: 10px auto 20px;
+  transition: all 0.3s ease-in;
 }
-
 .executive-img > img {
   height: 100%;
   width: 100%;
   border-radius: 100%;
   object-fit: cover;
+}
+.executive:hover {
+  box-shadow: 0px 0px 7px;
 }
 
 .executive:after {
@@ -230,14 +340,13 @@ hr {
   box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
   transition: all 0.5s ease;
 }
-
 .contact-box:hover {
   border-radius: 10px;
   box-shadow: 0px 0px 3px 0px rgb(36, 35, 35);
 }
 
 .contact-box i {
-  color: rgb(22, 95, 143);
+  color: rgb(14, 109, 172);
   font-size: 18px;
 }
 
@@ -263,9 +372,21 @@ hr {
   transition: all 0.5s ease;
 }
 
-.contact-box .flexh-space-between a:hover {
-  color: rgb(187, 217, 235);
-  background-color: rgb(50, 58, 69);
+.contact-box .flexh-space-between a {
+  margin: auto 2px;
+  transition: all 0.5s ease;
+}
+.contact-box .flexh-space-between .instagram:hover {
+  background-color: rgb(235, 41, 20);
+}
+.contact-box .flexh-space-between .facebook:hover {
+  background-color: rgb(28, 81, 172);
+}
+.contact-box .flexh-space-between .linkedin:hover {
+  background-color: rgb(36, 122, 176);
+}
+.contact-box .flexh-space-between .twitter:hover {
+  background-color: rgb(62, 136, 183);
 }
 
 .map-section {
@@ -288,12 +409,26 @@ hr {
 }
 
 .footer-social a, input.blue-contact-page-btn {
-  transition: all 0.6s ease;
+  transition: all 0.5s ease;
+}
+.footer-social a:hover {
+  color: white;
 }
 
-.footer-social a:hover {
-  color: rgb(187, 217, 235);
-  background-color: #323a43;
+.footer-social .instagram:hover {
+  background-color: rgb(235, 41, 20);
+}
+.footer-social .youtube:hover {
+  background-color: rgb(250, 24, 24);
+}
+.footer-social .facebook:hover {
+  background-color: rgb(28, 81, 172);
+}
+.footer-social .linkedin:hover {
+  background-color: rgb(36, 122, 176);
+}
+.footer-social .twitter:hover {
+  background-color: rgb(36, 122, 176);
 }
 
 input.blue-contact-page-btn:hover {
@@ -7740,6 +7875,10 @@ figcaption {
 }
 
 @media screen and (max-width: 991px) {
+  .newHeaderBg {
+    /* display: none; */
+  }
+
   #w-node-8c8a059a7817-d24b8353 {
     -ms-grid-row: span 1;
     grid-row-start: span 1;

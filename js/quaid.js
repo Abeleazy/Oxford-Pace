@@ -16493,7 +16493,7 @@ Webflow.define('scroll', module.exports = function ($) {
 
     var rootTag = Webflow.env('editor') ? '.w-editor-body' : 'body';
     var header = $('header, ' + rootTag + ' > .header, ' + rootTag + ' > .w-nav:not([data-no-scroll])');
-    var offset = header.css('position') === 'fixed' ? header.outerHeight() : 0;
+    // var offset = header.css('position') === 'fixed' ? header.outerHeight() : 0;
     win.setTimeout(function () {
       scroll(el, offset);
     }, e ? 0 : 300);
