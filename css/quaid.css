@@ -14,17 +14,6 @@
 */
 
 
-/* .fixed-bg {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url(/images/filtergrade-4T4AcGJvARQ-unsplash.jpg) no-repeat cover;
-  background-attachment: fixed;
-  background-position: center;
-} */
-
-
 
 html {
   scroll-behavior: smooth;
@@ -35,7 +24,7 @@ header {
 }
 
   .newHeaderBg {
-    background: rgba(130, 130, 130, 0.6);
+    background: rgba(130, 130, 130, 0.5);
     position: fixed;
     width: 100%;
     border-bottom: 2px solid white;
@@ -58,15 +47,14 @@ header {
   bottom: 0;
   left: 0;
   background-image: linear-gradient(to bottom right,#30739a,#613831);
-  opacity: 0.25;
+  opacity: 0.1;
 }
 
 .welcome-text {
   color: white;
-  text-shadow: 0px 0px 1px black;
 }
 #welcome-text {
-  color: rgb(255, 255, 255);
+  color: rgb(253, 253, 253);
 }
 
 #hero-btn {
@@ -98,7 +86,7 @@ header {
 
 /* ABOUT */
 .about-us {
-  /* margin: auto; */
+  margin: 0 auto;
 }
 
 .about-us-header {
@@ -108,9 +96,18 @@ header {
   text-align: center;
 }
 
+.about-us-img {
+  width: 100%;
+  min-width: 400px;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .section .vision-mission-header {
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: black;
 }
 
@@ -120,7 +117,7 @@ header {
 }
 
 .vision-mission-section {
-  box-shadow: 0px 0px 80px rgb(159, 159, 159);
+  box-shadow: 0px 0px 50px rgb(159, 159, 159);
   background: url(/images/filtergrade-4T4AcGJvARQ-unsplash.jpg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -138,11 +135,15 @@ header {
   opacity: 0.3;
 }
 
+
+
 .box {
-  border-radius: 10px;
-  box-shadow: 0px 0px 1px rgb(159, 159, 159);
+  box-shadow: 0px 0px 1px 1px rgb(150, 150, 150);
   background: white;
   opacity: 0.9;
+  max-width: 450px;
+  margin: auto;
+  border-radius: 60px 2px 60px 0px;
 }
 
 .mission-box {
@@ -150,8 +151,13 @@ header {
 }
 
 .section .box h4 {
-  color: darkgoldenrod;
+  color: rgb(245, 25, 25);
   border-bottom: 1px solid rgb(165,209,216);
+}
+
+#core-value-section {
+  max-width: 1200px;
+  margin: auto 80px;
 }
 
 .core-value-header {
@@ -159,20 +165,21 @@ header {
   background: rgb(253, 253, 253);
   padding: 5px 60px;
   margin-bottom: 40px;
-  color: red;
+  color: rgb(245, 25, 25);
   display: inline-block;
 }
 
 .core-values {
-  background: radial-gradient(rgb(245, 245, 245), rgb(235, 235, 235));
+  background: radial-gradient(rgb(253, 253, 253), rgb(245, 245, 245));
   box-shadow: 0px 0px 50px rgb(159, 159, 159);
   border: 1px solid white;
   padding-top: 50px;
+  padding-bottom: 20px;
   border-radius: 50px;
   margin: 0 auto;
 }
 
-.core-values h2 {
+.core-values h3 {
   border-bottom: 1px solid #556575;
 }
 
@@ -180,7 +187,7 @@ header {
   color: rgb(14, 109, 172);
   background-color: white;
   border: 1px solid #556575;
-  border-top: 2px solid rgb(202, 25, 25);
+  border-top: 2px solid rgb(245, 25, 25);
   height: 100%;
   text-align: center;
   padding: 20px 10px;
@@ -209,7 +216,7 @@ header {
 
 .investment {
   margin: 15px 12px;
-  border: 1px solid rgb(235, 235, 235);
+  border: 1px solid rgb(237, 237, 237);
   padding: 20px 5px 50px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px black;
@@ -220,7 +227,7 @@ header {
 }
 
 .icon-bg {
-  background-color: red;
+  background-color: rgb(245, 25, 25);
   color: #fff;
   width: 65px;
   height: 65px;
@@ -243,10 +250,10 @@ header {
 }
 .investment:hover > .icon-bg {
   background-color: white;
-  border: 1px solid red;
+  border: 1px solid rgb(245, 25, 25);
 }
 .investment:hover > .icon-bg i {
-  color: red;
+  color: rgb(245, 25, 25);
 }
 
 .investment-learn-more-btn {
@@ -276,15 +283,13 @@ header {
   padding-top: 80px;
   padding-bottom: 80px;
   border-bottom: 4px solid goldenrod;
-  border-top-right-radius: 40px;
-  border-top-left-radius: 40px;
 }
 
 .executive-header {
   border-radius: 10px;
   display: inline-block;
   padding: 5px 35px;
-  background: rgb(80, 80, 80);
+  background: rgb(35, 35, 35);
   color: white;
 }
 
@@ -342,7 +347,7 @@ hr {
 }
 .contact-box:hover {
   border-radius: 10px;
-  box-shadow: 0px 0px 3px 0px rgb(36, 35, 35);
+  box-shadow: 0px 0px 3px 0px rgb(35, 35, 35);
 }
 
 .contact-box i {
@@ -6379,7 +6384,7 @@ figcaption {
     background-color: #fff;
   }
   .navigation-section {
-    position: static;
+    position: fixed;
     z-index: 9999;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -7871,6 +7876,17 @@ figcaption {
 @media screen and (max-width: 991px) {
   .newHeaderBg {
     /* display: none; */
+  }
+
+  .vision-mission-section {
+    background: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 48px;
+  }
+  
+  .vision-mission-section:before {
+    background-image: none;
   }
 
   #w-node-8c8a059a7817-d24b8353 {
