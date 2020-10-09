@@ -83,6 +83,10 @@ header {
   transition: all 0.3s ease-in;
 }
 
+.c-counter.has-shadow.is-featured img {
+  
+}
+
 
 /* INDEX */
 .c-gridpost__card{
@@ -1099,7 +1103,7 @@ figcaption {
 
 .section.is-hero {
   min-height: 800px;
-  padding-top: 192px;
+  padding-top: 185px;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -5455,23 +5459,31 @@ figcaption {
 }
 
 .c-gridgallery1__image-2.img4 {
-  background-image: url('/images/wealth-management.jpg');
-  background-position: 50% 50%;
+  /* background-image: url('/images/wealth-management.jpg');
+  background-position: 50% 50%; */
+  background-image: linear-gradient(rgba(29, 38, 113, 0.5), rgba(195, 55, 100, 0.5)), url('/images/house.jpg');
+  background-position: 70% 100%;
 }
 
 .c-gridgallery1__image-2.img3 {
-  background-image: url('/images/retirement-planning.jpg');
-  background-position: 50% 100%;
+  /* background-image: url('/images/retirement-planning.jpg');
+  background-position: 50% 100%; */
+  background: linear-gradient(rgba(29, 38, 113, 0.5), rgba(195, 55, 100, 0.5)), url("/images/dollar.jpg"); /* The least supported option. */
+  background-position: 30% 100%;
 }
 
 .c-gridgallery1__image-2.img5 {
-  background-image: url('/images/estate-planning.jpg');
+  /* background-image: url('/images/estate-planning.jpg');
+  background-position: 50% 100%; */
+  background-image: linear-gradient( rgba(195, 55, 100, 0.5), rgba(29, 38, 113, 0.5)), url('/images/land.jpg');
   background-position: 50% 100%;
 }
 
 .c-gridgallery1__image-2.img6 {
-  background-image: url('/images/family-investment.jpg');
-  background-position: 50% 100%;
+  /* background-image: url('/images/family-investment.jpg');
+  background-position: 50% 100%; */
+  background: linear-gradient(rgba(195, 55, 100, 0.5),rgba(29, 38, 113, 0.5)), url("/images/kids.jpg"); /* The least supported option. */
+  background-position: 50% 30%;
 }
 
 .link-block-2 {
