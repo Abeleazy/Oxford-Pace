@@ -145,15 +145,12 @@ header {
   opacity: 0.3;
 }
 
-
-
-.box {
-  box-shadow: 0px 0px 1px 1px rgb(150, 150, 150);
+.vision-box, .mission-box {
   background: white;
-  opacity: 0.9;
+  opacity: 0.99;
   max-width: 450px;
   margin: auto;
-  border-radius: 60px 2px 60px 0px;
+  border-radius: 50px 0px 50px 0px;
 }
 
 .mission-box {
@@ -352,12 +349,12 @@ hr {
 
 .contact-box {
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+  box-shadow: inset 0px 0px 5px 0px rgb(0, 0, 0);
   transition: all 0.5s ease;
 }
 .contact-box:hover {
   border-radius: 10px;
-  box-shadow: 0px 0px 3px 0px rgb(35, 35, 35);
+  transform: scale(0.95);
 }
 
 .contact-box i {
@@ -446,7 +443,7 @@ hr {
   background-color: rgb(36, 122, 176);
 }
 
-input.blue-contact-page-btn:hover {
+input.blue-contact-page-btn:hover, .blue-contact-page-btn:hover {
   background-color: rgb(60, 52, 214);
 }
 
@@ -7886,10 +7883,6 @@ figcaption {
 }
 
 @media screen and (max-width: 991px) {
-  .newHeaderBg {
-    /* display: none; */
-  }
-
   .vision-mission-section {
     background: none;
     margin-top: 30px;
@@ -7899,6 +7892,9 @@ figcaption {
   
   .vision-mission-section:before {
     background-image: none;
+  }
+  .vision-box, .mission-box {
+    box-shadow: 0px 0px 1px 1px rgb(150, 150, 150);
   }
 
   #w-node-8c8a059a7817-d24b8353 {
