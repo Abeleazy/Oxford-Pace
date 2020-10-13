@@ -23,11 +23,78 @@ header {
   transition: all 0.5s ease-in;
 }
 
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  height: 5px;
+  background: rgb(28, 81, 172);
+  width: 0%;
+  z-index: 999;
+}
+
+/* .hero-display-text {
+  animation: type 3s steps(118);
+  border-right: 4px solid black;
+  max-width: 625px;
+  width: 118ch;
+} */
+
+.section.is-hero.position-relative {
+  position: relative;
+}
+
+.section.is-hero.position-relative .down-icon a {
+  z-index: 9;
+  color: #1d2b36;
+  text-decoration: none;
+  transition: 200ms linear;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  bottom: 105px;
+  /* bottom: calc(100vh - 85vh); */
+  animation-name: down;
+  animation-duration: 650ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.section.is-hero.position-relative .down-icon a i {
+  font-size: 25px;
+}
+
+/* KEYFRAMES */
+@keyframes type {
+  0% {
+      width: 0ch;
+  }
+
+  100% {
+      width: 118ch;
+  }
+}
+
+@keyframes down {
+  0% {
+      transform: translateY(0px);
+  }
+
+  75% {
+      transform: translateY(5px);
+  }
+
+  100% {
+      transform: translateY(8px);
+  }
+}
+/* KEYFRAMES END */
+
   .newHeaderBg {
     background: rgba(130, 130, 130, 0.4);
     position: fixed;
     width: 100%;
-    border-bottom: 1px solid white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     z-index: 999;
@@ -83,12 +150,26 @@ header {
   transition: all 0.3s ease-in;
 }
 
-.c-counter.has-shadow.is-featured img {
-  
-}
-
 
 /* INDEX */
+
+.my-index-img1 {
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: top;
+  -o-object-position: top;
+  width: 100%;
+  height: 350px;
+}
+
+.impact-box {
+  border-top: 2px solid rgb(86,79,232);
+}
+
+.impact-icon {
+  font-size: 22px;
+}
+
 .c-gridpost__card{
   transition: 0.3s ease-in;
 }
@@ -96,6 +177,7 @@ header {
 .c-gridpost__card:hover {
   transform: translateY(-3%);
 }
+
 
 
 /* ABOUT */
@@ -116,6 +198,7 @@ header {
   height: 100%;
   min-height: 300px;
   object-fit: cover;
+  -o-object-fit: cover;
   border-radius: 10px;
 }
 
@@ -332,6 +415,7 @@ hr {
   width: 100%;
   border-radius: 100%;
   object-fit: cover;
+  -o-object-fit: cover;
 }
 .executive:hover {
   box-shadow: 0px 0px 7px;
@@ -1103,7 +1187,7 @@ figcaption {
 
 .section.is-hero {
   min-height: 800px;
-  padding-top: 185px;
+  padding-top: 192px;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -5389,8 +5473,8 @@ figcaption {
   left: 20%;
   top: auto;
   right: auto;
-  bottom: 0px;
-  height: 90%;
+  bottom: -30px;
+  height: 98%;
   width: auto;
 }
 
@@ -5504,10 +5588,13 @@ figcaption {
   -ms-transform-origin: 0% 0%;
   transform-origin: 0% 0%;
   color: rgba(54, 44, 29, 0.06);
-  font-size: 105px;
+  font-size: 80px;
   line-height: 1;
   font-weight: 900;
   text-transform: uppercase;
+}
+.c-shadowtext.client-say {
+  top: 420px;
 }
 
 .bg-hero-decor {
@@ -6369,8 +6456,8 @@ figcaption {
     padding-bottom: 96px;
   }
   .c-imageblock-link.img2 {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('https://via.placeholder.com/1000x600.png?text=IMAGE');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1000x600.png?text=IMAGE');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('/images/0607_escalate-complain_485x340.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/0607_escalate-complain_485x340.jpg');
     background-position: 0px 0px, 50% 50%;
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
@@ -7895,6 +7982,10 @@ figcaption {
 }
 
 @media screen and (max-width: 991px) {
+  .section.is-hero.position-relative .down-icon a {
+    bottom: 17px;
+  }
+
   .vision-mission-section {
     background: none;
     margin-top: 30px;
@@ -7907,6 +7998,15 @@ figcaption {
   }
   .vision-box, .mission-box {
     box-shadow: 0px 0px 1px 1px rgb(150, 150, 150);
+  }
+
+  .my-index-img2 {
+    object-fit: cover;
+    -o-object-fit: cover;
+    object-position: top;
+    -o-object-position: top;
+    width: auto;
+    height: 350px;
   }
 
   #w-node-8c8a059a7817-d24b8353 {
