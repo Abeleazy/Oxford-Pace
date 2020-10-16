@@ -23,13 +23,80 @@ header {
   transition: all 0.5s ease-in;
 }
 
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  height: 5px;
+  background: rgb(28, 81, 172);
+  width: 0%;
+  z-index: 999;
+}
+
+/* .hero-display-text {
+  animation: type 3s steps(118);
+  border-right: 4px solid black;
+  max-width: 625px;
+  width: 118ch;
+} */
+
+.section.is-hero.position-relative {
+  position: relative;
+}
+
+.section.is-hero.position-relative .down-icon a {
+  z-index: 9;
+  color: #1d2b36;
+  text-decoration: none;
+  transition: 200ms linear;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  bottom: 105px;
+  /* bottom: calc(100vh - 85vh); */
+  animation-name: down;
+  animation-duration: 650ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.section.is-hero.position-relative .down-icon a i {
+  font-size: 25px;
+}
+
+/* KEYFRAMES */
+@keyframes type {
+  0% {
+      width: 0ch;
+  }
+
+  100% {
+      width: 118ch;
+  }
+}
+
+@keyframes down {
+  0% {
+      transform: translateY(0px);
+  }
+
+  75% {
+      transform: translateY(5px);
+  }
+
+  100% {
+      transform: translateY(8px);
+  }
+}
+/* KEYFRAMES END */
+
   .newHeaderBg {
-    background: rgba(130, 130, 130, 0.5);
+    background: rgba(130, 130, 130, 0.4);
     position: fixed;
     width: 100%;
-    border-bottom: 2px solid white;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     z-index: 999;
   }
 
@@ -84,6 +151,35 @@ header {
 }
 
 
+/* INDEX */
+
+.my-index-img1 {
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: top;
+  -o-object-position: top;
+  width: 100%;
+  height: 350px;
+}
+
+.impact-box {
+  border-top: 2px solid rgb(86,79,232);
+}
+
+.impact-icon {
+  font-size: 22px;
+}
+
+.c-gridpost__card{
+  transition: 0.3s ease-in;
+}
+
+.c-gridpost__card:hover {
+  transform: translateY(-3%);
+}
+
+
+
 /* ABOUT */
 .about-us {
   margin: 0 auto;
@@ -102,6 +198,7 @@ header {
   height: 100%;
   min-height: 300px;
   object-fit: cover;
+  -o-object-fit: cover;
   border-radius: 10px;
 }
 
@@ -135,15 +232,12 @@ header {
   opacity: 0.3;
 }
 
-
-
-.box {
-  box-shadow: 0px 0px 1px 1px rgb(150, 150, 150);
+.vision-box, .mission-box {
   background: white;
-  opacity: 0.9;
+  opacity: 0.99;
   max-width: 450px;
   margin: auto;
-  border-radius: 60px 2px 60px 0px;
+  border-radius: 50px 0px 50px 0px;
 }
 
 .mission-box {
@@ -321,6 +415,7 @@ hr {
   width: 100%;
   border-radius: 100%;
   object-fit: cover;
+  -o-object-fit: cover;
 }
 .executive:hover {
   box-shadow: 0px 0px 7px;
@@ -342,12 +437,12 @@ hr {
 
 .contact-box {
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+  box-shadow: inset 0px 0px 5px 0px rgb(0, 0, 0);
   transition: all 0.5s ease;
 }
 .contact-box:hover {
   border-radius: 10px;
-  box-shadow: 0px 0px 3px 0px rgb(35, 35, 35);
+  transform: scale(0.95);
 }
 
 .contact-box i {
@@ -436,7 +531,7 @@ hr {
   background-color: rgb(36, 122, 176);
 }
 
-input.blue-contact-page-btn:hover {
+input.blue-contact-page-btn:hover, .blue-contact-page-btn:hover {
   background-color: rgb(60, 52, 214);
 }
 
@@ -5091,8 +5186,8 @@ figcaption {
 }
 
 .c-imageblock-link.img2 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.31)), to(rgba(0, 0, 0, 0.31))), url('https://via.placeholder.com/1000x600.png?text=IMAGE');
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url('https://via.placeholder.com/1000x600.png?text=IMAGE');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.31)), to(rgba(0, 0, 0, 0.31))), url('/images/discover-more.jpg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.31)), url('/images/discover-more.jpg');
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -5375,10 +5470,12 @@ figcaption {
 
 .hero-image {
   position: absolute;
-  left: 0%;
+  left: 20%;
   top: auto;
   right: auto;
   bottom: -30px;
+  height: 98%;
+  width: auto;
 }
 
 .bg-hero {
@@ -5421,8 +5518,8 @@ figcaption {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  /* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(80%, rgba(0, 0, 0, 0.3))); */
-  /* background-image: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.3) 80%); */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(80%, rgba(0, 0, 0, 0.3)));
+  background-image: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.3) 80%);
   box-shadow: inset 0 0 0 0 #fff;
   -webkit-transition: box-shadow 1000ms cubic-bezier(.215, .61, .355, 1);
   transition: box-shadow 1000ms cubic-bezier(.215, .61, .355, 1);
@@ -5440,34 +5537,36 @@ figcaption {
   right: 0%;
   bottom: 0%;
   background-image: url('https://via.placeholder.com/1000x600.png?text=IMAGE');
-  background-position: 50% 90%;
+  background-position: 50% 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .c-gridgallery1__image-2.img4 {
+  /* background-image: url('/images/wealth-management.jpg');
+  background-position: 50% 50%; */
   background-image: linear-gradient(rgba(29, 38, 113, 0.5), rgba(195, 55, 100, 0.5)), url('/images/house.jpg');
   background-position: 70% 100%;
 }
 
 .c-gridgallery1__image-2.img3 {
+  /* background-image: url('/images/retirement-planning.jpg');
+  background-position: 50% 100%; */
   background: linear-gradient(rgba(29, 38, 113, 0.5), rgba(195, 55, 100, 0.5)), url("/images/dollar.jpg"); /* The least supported option. */
-  /* background-image: url('/images/kids.jpg'); */
   background-position: 30% 100%;
-  /* background-size: contain; */
-  /* background-repeat: no-repeat; */
-  /* height: 600px; */
 }
 
 .c-gridgallery1__image-2.img5 {
-  /* background: linear-gradient(rgba(29, 38, 113, 0.5), rgba(195, 55, 100, 0.5)), url("/images/land.jpg"); The least supported option. */
+  /* background-image: url('/images/estate-planning.jpg');
+  background-position: 50% 100%; */
   background-image: linear-gradient( rgba(195, 55, 100, 0.5), rgba(29, 38, 113, 0.5)), url('/images/land.jpg');
   background-position: 50% 100%;
 }
 
 .c-gridgallery1__image-2.img6 {
+  /* background-image: url('/images/family-investment.jpg');
+  background-position: 50% 100%; */
   background: linear-gradient(rgba(195, 55, 100, 0.5),rgba(29, 38, 113, 0.5)), url("/images/kids.jpg"); /* The least supported option. */
-  /* background-image: url('/images/kids.jpg'); */
   background-position: 50% 30%;
 }
 
@@ -5489,10 +5588,13 @@ figcaption {
   -ms-transform-origin: 0% 0%;
   transform-origin: 0% 0%;
   color: rgba(54, 44, 29, 0.06);
-  font-size: 105px;
+  font-size: 80px;
   line-height: 1;
   font-weight: 900;
   text-transform: uppercase;
+}
+.c-shadowtext.client-say {
+  top: 420px;
 }
 
 .bg-hero-decor {
@@ -6354,8 +6456,8 @@ figcaption {
     padding-bottom: 96px;
   }
   .c-imageblock-link.img2 {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('https://via.placeholder.com/1000x600.png?text=IMAGE');
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1000x600.png?text=IMAGE');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('/images/0607_escalate-complain_485x340.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/0607_escalate-complain_485x340.jpg');
     background-position: 0px 0px, 50% 50%;
     background-size: auto, cover;
     background-repeat: repeat, no-repeat;
@@ -6660,9 +6762,9 @@ figcaption {
     -ms-grid-rows: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
     grid-template-rows: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
   }
-  /* .c-slider {
+  .c-slider {
     max-width: 100vw;
-  } */
+  }
 }
 
 @media (max-width: 479px) {
@@ -7880,8 +7982,8 @@ figcaption {
 }
 
 @media screen and (max-width: 991px) {
-  .newHeaderBg {
-    /* display: none; */
+  .section.is-hero.position-relative .down-icon a {
+    bottom: 17px;
   }
 
   .vision-mission-section {
@@ -7893,6 +7995,18 @@ figcaption {
   
   .vision-mission-section:before {
     background-image: none;
+  }
+  .vision-box, .mission-box {
+    box-shadow: 0px 0px 1px 1px rgb(150, 150, 150);
+  }
+
+  .my-index-img2 {
+    object-fit: cover;
+    -o-object-fit: cover;
+    object-position: top;
+    -o-object-position: top;
+    width: auto;
+    height: 350px;
   }
 
   #w-node-8c8a059a7817-d24b8353 {
@@ -8235,6 +8349,10 @@ figcaption {
     width: 100%;
     max-width: 300px;
     margin: auto;
+  }
+
+  .section.is-hero {
+    padding-top: 140px;
   }
 }
 /* end of media query mw-700px */
