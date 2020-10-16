@@ -44,20 +44,20 @@ $(document).ready(() => {
   
       return ((elemBottom < docViewBottom) && (elemTop > docViewTop));
     };
-
+    
     $(window).scroll(() => {
-      // If element is scrolled into view, add animate__backInLeft..
-      $('.scroll-animations .animate__animated').each(function() {
+      // If checklist_item is scrolled into view, add animate__slideInLeft.
+      $('.scroll-animations1 .animate__animated').each(function() {
         if(isScrolledIntoView(this) === true) {
-          $(this).addClass('animate__backInLeft');
+          $(this).addClass('animate__slideInLeft');
         }else{
-          $(this).removeClass('animate__backInLeft');
+          $(this).removeClass('animate__slideInLeft');
         };
       });
     });
 
     $(window).scroll(() => {
-      // If element is scrolled into view, add animate__backInLeft..
+      // If c-services is scrolled into view, add animate__zoomInDown.
       $('.scroll-animations2 .animate__animated').each(function() {
         if(isScrolledIntoView(this) === true) {
           $(this).addClass('animate__zoomInDown');
@@ -66,23 +66,50 @@ $(document).ready(() => {
         };
       });
     });
+    
+    $(window).scroll(() => {
+      // If impact-in-number element is scrolled into view, add animate__backInLeft.
+      $('.scroll-animations3 .animate__animated').each(function() {
+        if(isScrolledIntoView(this) === true) {
+          $(this).addClass('animate__backInLeft');
+        }else{
+          $(this).removeClass('animate__backInLeft');
+        };
+      });
+    });
+
+    // $(window).scroll(() => {
+    //   // If blog-item is scrolled into view, add animate__slideInLeft.
+    //   $('.scroll-animations4 .animate__animated').each(function() {
+    //     setInterval(() => {
+    //       if(isScrolledIntoView(this) === true) {
+    //         $(this).addClass('animate__bounce');
+    //       }else{
+    //         $(this).removeClass('animate__bounce');
+    //       };
+    //     }, 3000);
+    //   });
+    // });
 });
 // ANIMATION SCROLL END =============================================>
 
 
 // ANIMATE ON SCROLL =============================================>
 AOS.init({
-  offset: 250,
+  offset: 200,
   duration: 800
 });
 // ANIMATE ON SCROLL END =============================================>
 
-// var myString = "We work directly with global investors to unlock investment opportunities in Nigeria to help you grow your operations.";
+
+// TEXT ANIMATION
+
+// var myString = "When you invest in real estate, you are buying the time you would";
 // var myArray = myString.split("");
 // var loopTimer;
 // function frameLooper() {
 // 	if(myArray.length > 0) {
-// 		document.getElementById("myTypingText").innerHTML += myArray.shift();
+// 		document.querySelector(".myTypingText").innerHTML += myArray.shift();
 // 	} else {
 // 		clearTimeout(loopTimer); 
 //     return false;
@@ -92,17 +119,24 @@ AOS.init({
 // frameLooper();
 
 
-var typed = new Typed(".myTypingText1", {
-  strings: [
-  "We work directly with global investors", 
-  "We unlock investment opportunities in Nigeria", 
-  "We are here to help you grow your operations."
-],
-  smartBackspace: true ,
-  typeSpeed: 80,
-  backSpeed: 50,
-  loop: true
-});
+// var typed = new Typed(".myTypingText2", {
+//   strings: [
+//     "We work directly with global investors to unlock investment opportunities in Nigeria in order to help you grow your operations.",
+//     "We help you prepare a better future for your kids."
+//     "We work directly with global investors", 
+//     "We unlock investment opportunities in Nigeria", 
+//     "We are here to help you grow your operations."  
+//   ],
+//   startDelay: 1000,
+//   // smartBackspace: true,
+//   typeSpeed: 80,
+//   // backSpeed: 50,
+//   fadeOut: true,
+//   fadeOutClass: 'typed-fade-out',
+//   fadeOutDelay: 2000,
+//   showCursor: false,
+//   loop: true
+// });
 
 
 
