@@ -951,15 +951,16 @@ textarea.w-select {
   white-space: normal;
   text-align: left;
 }
+
 .w-slider-nav {
   position: absolute;
   z-index: 2;
-  top: 345;
+  top: auto;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  padding-top: 15px;
+  padding-top: 10px;
   height: 40px;
   text-align: center;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
