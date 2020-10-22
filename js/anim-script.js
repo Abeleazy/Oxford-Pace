@@ -16,7 +16,7 @@ window.onscroll = () => {
         // header.style.top = "20px";
         header.classList.add('newHeaderBg');
         header.classList.remove('position-absolute');
-        document.querySelector('.hamburger-logo-image').style.paddingTop = "18px";
+        // document.querySelector('.hamburger-logo-image').style.paddingTop = "18px";
     }else{
         header.style.top = `-${header.offsetHeight}px`;
     };
@@ -26,6 +26,7 @@ window.onscroll = () => {
         header.classList.remove('newHeaderBg');
         header.classList.add('position-absolute');
         header.style.top = "0px";
+        // document.querySelector('.hamburger-logo-image').style.paddingTop = "0px";
     };
 
     myFunction();
@@ -179,14 +180,6 @@ $(document).ready(() => {
     });
 });
 // SCROLL ANIMATION END =============================================>
-
-
-// ANIMATE ON SCROLL =============================================>
-AOS.init({
-  offset: 160,
-  duration: 800
-});
-// ANIMATE ON SCROLL END =============================================>
 
 
 // setInterval(function(){
